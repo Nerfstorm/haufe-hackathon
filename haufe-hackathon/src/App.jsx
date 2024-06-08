@@ -1,7 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import './App.css';
 
 function TopPanel() {
   return (
@@ -10,8 +9,6 @@ function TopPanel() {
     </div>
   );
 }
-
-
 
 function RefPanel({
   title = "Greatest Dramatic Story",
@@ -79,7 +76,7 @@ function RefPanel({
 function App() {
   return (
     <div className="gradient-background flex flex-col items-center justify-center h-screen">
-      <TopPanel /> {/* Place MyComponent here */}
+      <TopPanel />
       <div className="scrollable-panel">
         <RefPanel
           title="Epic Adventure"
@@ -125,7 +122,6 @@ function App() {
           likes="456 👍"
           imageUrl="https://example.com/image1.jpg"
         />
-        {/* Add more <RefPanel /> components with different props as needed */}
       </div>
     </div>
   );
