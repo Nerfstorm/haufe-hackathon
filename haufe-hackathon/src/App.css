@@ -2,11 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.gradient-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes items to the top and bottom of the container */
+  background: linear-gradient(to bottom, #D07A15, #343289);
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+}
+
+.scrollable-panel {
+  padding: 5px;
+  overflow-y: auto;
+  max-height: calc(80vh - 10px); /* Adjusted for padding */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Hide scrollbar for WebKit browsers */
+.scrollable-panel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: Adjust scrollbar width for Firefox */
+.scrollable-panel {
+  scrollbar-width: none;
+}
+
+
+.top-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2.5rem; /* Equivalent to px-16 py-6 */
+  width: 100%; /* Equivalent to w-full */
+  font-size: 5rem; /* Equivalent to text-8xl */
+  font-weight: bold; /* Equivalent to font-bold */
+  color: #f59e0b; /* Equivalent to text-yellow-500 */
+  min-height: 120px; /* Equivalent to min-h-[120px] */
+  background-color: #343289; /* Equivalent to bg-amber-700 */
+  margin-bottom: 1.5rem; /* Add margin bottom for spacing */
 }
 
 .logo {
@@ -35,6 +76,22 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+    /* Equivalent to max-md:px-5 */
+  .top-panel {
+    padding: 0.5rem; /* Adjust according to your needs */
+  }
+  /* Equivalent to max-md:max-w-full */
+  .top-panel {
+    max-width: 100%; /* Adjust according to your needs */
+  }
+  /* Equivalent to max-md:text-4xl */
+  .top-panel {
+    font-size: 2rem; /* Adjust according to your needs */
+  }
+}
+
+.bg-amber-700 {
+  background-color: #343289; /* Equivalent to bg-amber-700 */
 }
 
 .card {
