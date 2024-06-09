@@ -1,3 +1,3 @@
 # Haufe Hackathon
 
-#### *"Greatest study story...ever" ~ Steven Spielberg*
+### Run from haufe hackathon subfolder npm run dev
